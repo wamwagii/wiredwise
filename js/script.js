@@ -21,6 +21,8 @@ class DigitalSolutionsApp {
             estimateResult: document.getElementById('estimateResult'),
             ctaButton: document.getElementById('ctaButton'),
             yearElement: document.getElementById('year'),
+            itFullName: document.getElementById('itFullName'),
+            itPhone: document.getElementById('itPhone'),
             
             // Web Development Form elements
             webDevForm: document.getElementById('webDevelopmentForm'),
@@ -45,7 +47,8 @@ class DigitalSolutionsApp {
             SERVER_FACTOR_SQFT: 5000,
             WORKSTATION_FACTOR_SQFT: 200,
             MIN_AREA: 100,
-            MAX_AREA: 100000
+            MAX_AREA: 100000,
+            WHATSAPP_NUMBER: '254722123456' // Business WhatsApp number
         };
 
         // Initialize the application
@@ -88,6 +91,12 @@ class DigitalSolutionsApp {
             radio.addEventListener('change', 
                 () => this.toggleWebsiteFields(radio.value === 'yes'));
         });
+
+        // IT CTA button
+        if (this.elements.ctaButton) {
+            this.elements.ctaButton.addEventListener('click', 
+                (e) => this.handleITCTA(e));
+        }
     }
 
     setupProblemCards() {
@@ -182,8 +191,14 @@ class DigitalSolutionsApp {
     handleServiceFormSubmit(event) {
         event.preventDefault();
 
+        // Validate required fields
         if (!this.elements.areaInput.checkValidity()) {
             this.elements.areaInput.reportValidity();
+            return;
+        }
+        
+        if (!this.elements.itFullName.checkValidity() || !this.elements.itPhone.checkValidity()) {
+            this.showErrorToast("Please provide your name and phone number");
             return;
         }
 
@@ -200,6 +215,8 @@ class DigitalSolutionsApp {
 
     getITFormData() {
         return {
+            fullName: this.elements.itFullName.value,
+            phone: this.elements.itPhone.value,
             area: parseFloat(this.elements.areaInput.value),
             buildingFactor: parseFloat(this.elements.buildingTypeSelect.value),
             usageFactor: parseFloat(document.querySelector('input[name="usage"]:checked').value),
@@ -280,6 +297,25 @@ class DigitalSolutionsApp {
         }, 100);
     }
 
+    handleITCTA(event) {
+        event.preventDefault();
+        
+        // Validate contact information
+        if (!this.elements.itFullName.checkValidity() || !this.elements.itPhone.checkValidity()) {
+            this.showErrorToast("Please provide your name and phone number");
+            return;
+        }
+
+        try {
+            const formData = this.getITFormData();
+            const results = this.calculateITNeeds(formData);
+            this.sendITAssessmentToWhatsApp(formData, results);
+        } catch (error) {
+            console.error('Error sending IT assessment:', error);
+            this.showErrorToast("Failed to send. Please try again.");
+        }
+    }
+
     // =====================
     // WEB DEVELOPMENT FUNCTIONALITY
     // =====================
@@ -295,18 +331,142 @@ class DigitalSolutionsApp {
         // Honeypot validation
         if (this.elements.honeypotField.value !== '') return;
 
+        // Collect form data
+        const formData = this.getWebDevFormData();
+
         // Show thank you message
         this.elements.step4.classList.add('hidden');
         this.elements.thankYouMessage.classList.remove('hidden');
         this.elements.thankYouMessage.scrollIntoView({ behavior: 'smooth' });
 
+        // Send data to WhatsApp
+        this.sendWebDevToWhatsApp(formData);
+
         this.trackEvent('webdev_assessment_submission', 'Web Development Assessment');
+    }
+
+    getWebDevFormData() {
+        return {
+            fullName: document.getElementById('fullName').value,
+            phone: document.getElementById('phone').value,
+            hasWebsite: document.querySelector('input[name="hasWebsite"]:checked').value,
+            websiteUrl: document.getElementById('websiteUrl')?.value || '',
+            projectType: document.getElementById('projectType').value,
+            primaryGoal: document.getElementById('primaryGoal').value,
+            timeline: document.getElementById('timeline').value,
+            problems: this.getSelectedProblems(),
+            benefits: this.getSelectedBenefits()
+        };
+    }
+
+    getSelectedProblems() {
+        return Array.from(document.querySelectorAll('#problemsSection input[type="checkbox"]:checked'))
+            .map(cb => cb.nextElementSibling.textContent.trim());
+    }
+
+    getSelectedBenefits() {
+        return Array.from(document.querySelectorAll('#benefitsSection input[type="checkbox"]:checked'))
+            .map(cb => cb.nextElementSibling.textContent.trim());
     }
 
     enableSubmit() {
         if (this.elements.submitBtn) {
             this.elements.submitBtn.disabled = false;
         }
+    }
+
+    // =====================
+    // WHATSAPP INTEGRATION
+    // =====================
+    sendWebDevToWhatsApp(formData) {
+        try {
+            // Create WhatsApp message content
+            let message = `*New Web Development Inquiry*\n\n`;
+            message += `👤 *Name:* ${formData.fullName}\n`;
+            message += `📱 *Phone:* ${formData.phone}\n`;
+            message += `🌐 *Has Website:* ${formData.hasWebsite === 'yes' ? 'Yes' : 'No'}\n`;
+            
+            if (formData.hasWebsite === 'yes' && formData.websiteUrl) {
+                message += `🔗 *Website URL:* ${formData.websiteUrl}\n`;
+            }
+            
+            message += `\n*Project Details:*\n`;
+            message += `🛠️ *Project Type:* ${formData.projectType}\n`;
+            message += `🎯 *Primary Goal:* ${formData.primaryGoal}\n`;
+            message += `⏱️ *Timeline:* ${formData.timeline}\n`;
+            
+            if (formData.hasWebsite === 'yes' && formData.problems.length) {
+                message += `\n*Reported Problems:*\n`;
+                formData.problems.forEach((p, i) => message += `➡️ ${i + 1}. ${p}\n`);
+            }
+            
+            if (formData.hasWebsite === 'no' && formData.benefits.length) {
+                message += `\n*Desired Benefits:*\n`;
+                formData.benefits.forEach((b, i) => message += `✅ ${i + 1}. ${b}\n`);
+            }
+            
+            message += `\n_Generated by Digital Solutions App_`;
+            
+            this.openWhatsApp(message);
+            
+        } catch (error) {
+            console.error('Error sending to WhatsApp:', error);
+            this.showErrorToast("Couldn't open WhatsApp. Please contact us directly.");
+        }
+    }
+
+    sendITAssessmentToWhatsApp(formData, results) {
+        try {
+            const { area, buildingType, needsCabling, needsCCTV, 
+                    needsAccessControl, needsTelephony } = formData;
+            const { accessPoints, estimatedDevices, recommendedServers, recommendedWorkstations } = results;
+            
+            // Create WhatsApp message content
+            let message = `*New IT Infrastructure Assessment*\n\n`;
+            message += `👤 *Name:* ${formData.fullName}\n`;
+            message += `📱 *Phone:* ${formData.phone}\n`;
+            message += `🏢 *Building Type:* ${buildingType}\n`;
+            message += `📏 *Area:* ${area.toLocaleString()} sq. ft\n`;
+            
+            message += `\n*Assessment Results:*\n`;
+            message += `📶 *WiFi Access Points:* ${accessPoints}\n`;
+            message += `💻 *Estimated Devices:* ${estimatedDevices.toLocaleString()}\n`;
+            message += `🖥️ *Workstations:* ${recommendedWorkstations}\n`;
+            message += `🗄️ *Servers:* ${recommendedServers}\n`;
+            
+            // Additional services
+            const services = [];
+            if (needsCabling) services.push("structured cabling");
+            if (needsCCTV) services.push("CCTV");
+            if (needsAccessControl) services.push("access control");
+            if (needsTelephony) services.push("telephony");
+            
+            if (services.length) {
+                message += `\n*Additional Services:*\n`;
+                message += `🔌 ${services.join("\n🔌 ")}\n`;
+            }
+            
+            message += `\n_Generated by Digital Solutions App_`;
+            
+            this.openWhatsApp(message);
+            
+        } catch (error) {
+            console.error('Error sending IT assessment:', error);
+            this.showErrorToast("Couldn't open WhatsApp. Please contact us directly.");
+        }
+    }
+
+    openWhatsApp(message) {
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(message);
+        
+        // Create WhatsApp link
+        const whatsappLink = `https://wa.me/${this.constants.WHATSAPP_NUMBER}?text=${encodedMessage}`;
+        
+        // Open WhatsApp in a new tab after a short delay
+        setTimeout(() => {
+            window.open(whatsappLink, '_blank');
+        }, 1000);
     }
 
     // =====================
@@ -322,8 +482,8 @@ class DigitalSolutionsApp {
     }
 
     showErrorToast(message) {
-        // Implement toast notification system here
-        alert(message);
+        // Simple alert for now - could be replaced with a proper toast notification
+        alert(`Error: ${message}`);
     }
 }
 
