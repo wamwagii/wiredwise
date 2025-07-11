@@ -1,33 +1,74 @@
-.masonry-grid {
-    display: grid;
-    grid-auto-rows: 1fr;
-  }
-  
-  .portfolio-item {
-    break-inside: avoid;
-    margin-bottom: 1.5rem;
-  }
-  
-  .portfolio-item img {
-    height: 100%;
-    min-height: 300px;
-    max-height: 500px;
-  }
-  
-  @media (min-width: 1024px) {
-    .masonry-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    
-    .portfolio-item:nth-child(3n+1) {
-      grid-row: span 2;
-    }
-    
-    .portfolio-item:nth-child(3n+2) {
-      grid-row: span 1;
-    }
-    
-    .portfolio-item:nth-child(3n+3) {
-      grid-row: span 2;
-    }
-  }
+   :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #8b5cf6;
+            --accent: #0ea5e9;
+        }
+      
+ .gradient-bg {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        
+        .form-card {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        
+        .problem-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .problem-card:hover, .problem-card.selected {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.3), transparent);
+            margin: 2rem 0;
+        }
+        
+        .step-indicator.active .step-circle {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .step-indicator.active .step-label {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .benefit-card {
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateX(5px);
+            background-color: #f0f7ff;
+        }
+        
+        input:checked + .service-card {
+            border-color: var(--primary);
+            background-color: #f0f7ff;
+        }
