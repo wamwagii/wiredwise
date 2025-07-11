@@ -644,5 +644,69 @@
         </div>
     </footer>
     <script src="/js/script.js"></script>
+    <script>
+        // Form step navigation
+        function showStep(stepId) {
+            // Hide all steps
+            document.getElementById('step1').classList.add('hidden');
+            document.getElementById('step2').classList.add('hidden');
+            document.getElementById('step3').classList.add('hidden');
+            document.getElementById('step4').classList.add('hidden');
+            
+            // Show the requested step
+            document.getElementById(stepId).classList.remove('hidden');
+        }
+        
+        // Toggle website-related fields
+        function toggleWebsiteFields(hasWebsite) {
+            const problemsSection = document.getElementById('problemsSection');
+            const benefitsSection = document.getElementById('benefitsSection');
+            const websiteUrlContainer = document.getElementById('websiteUrlContainer');
+            
+            if (hasWebsite) {
+                problemsSection.classList.remove('hidden');
+                benefitsSection.classList.add('hidden');
+                websiteUrlContainer.classList.remove('hidden');
+            } else {
+                problemsSection.classList.add('hidden');
+                benefitsSection.classList.remove('hidden');
+                websiteUrlContainer.classList.add('hidden');
+            }
+        }
+        
+        // Form submission
+        document.getElementById('webDevelopmentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Honeypot check
+            const honeypot = document.getElementById('website').value;
+            if (honeypot !== '') {
+                return; // Likely a bot, don't submit
+            }
+            
+            // Show thank you message
+            document.getElementById('step4').classList.add('hidden');
+            document.getElementById('thankYouMessage').classList.remove('hidden');
+            
+            // Scroll to thank you message
+            document.getElementById('thankYouMessage').scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // Enable submit button after reCAPTCHA
+        function enableSubmit() {
+            document.getElementById('submitBtn').disabled = false;
+        }
+        
+        // Problem card selection
+        document.querySelectorAll('.problem-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (e.target.tagName !== 'INPUT') {
+                    const checkbox = this.querySelector('input[type="checkbox"]');
+                    checkbox.checked = !checkbox.checked;
+                    this.classList.toggle('selected', checkbox.checked);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
