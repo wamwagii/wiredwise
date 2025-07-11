@@ -963,11 +963,73 @@
     </section>
     <!-- Alpine.js (required for expand/collapse) -->
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-
-
     <!-- Footer -->
-    <footer class="bg-black text-white p-2 text-center">
-        <p>&copy; <span id="year"></span> WiredWise. </p>
+    <footer class="bg-black text-white p-2  pt-16 pb-8 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <span class="font-bold text-xl">WiredWise</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Professional IT solutions and web development services in Kenya.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Web Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">E-commerce Solutions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Mobile App Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">UI/UX Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">Corner 2, Kiganjo, Thika, Kenya</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">+254 717 340777</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-blue-400"></i>
+                            <span class="text-gray-400">info@wiredwise.tech</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-heading font-bold text-lg mb-4">Legal</h4>
+                   <ul class="space-y-2">
+                        <li class="flex justify-between">
+                            <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                        </li>
+                        <li class="flex justify-between">
+                            <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; <span id="year"></span> WiredWise. All rights reserved.</p>
+            </div>
+            <script>
+                // Update year in footer
+                document.getElementById('year').textContent = new Date().getFullYear();
+            </script>
+        </div>
     </footer>
 
     <script src="js/script.js"></script>
