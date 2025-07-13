@@ -48,7 +48,7 @@ class DigitalSolutionsApp {
             WORKSTATION_FACTOR_SQFT: 200,
             MIN_AREA: 100,
             MAX_AREA: 100000,
-            WHATSAPP_NUMBER: '254722123456' // Business WhatsApp number
+            WHATSAPP_NUMBER: '254717340777' // Business WhatsApp number
         };
 
         // Initialize the application
