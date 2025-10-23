@@ -4,36 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="/src/icons/logo.png">
+    <link rel="icon" type="image/x-icon" href="/src/icons/wiredwiselogo.png">
 
     <!-- Location-optimized Title -->
-    <title>IT Solutions Thika | Network & Web Development - WiredWise Kenya</title>
+    <title>Web Development Services Thika | Professional Websites - WiredWise Kenya</title>
 
     <!-- Geo-targeted Meta Description -->
     <meta name="description"
-        content="Leading IT infrastructure, network solutions & web development in Thika, Kenya. Local experts for WiFi, cabling, CCTV, security & e-commerce. Free consultation!">
-
-    <!-- Removed deprecated keywords tag -->
+        content="Professional web development services in Thika, Kenya. Custom websites, e-commerce solutions, and digital transformation for Kenyan businesses.">
 
     <!-- Updated Open Graph with Thika focus -->
-    <meta property="og:title" content="WiredWise Kenya | IT Experts in Thika">
+    <meta property="og:title" content="WiredWise Kenya | Web Development Experts in Thika">
     <meta property="og:description"
-        content="Thika-based IT solutions for networks, security systems, and custom web development. Serving Central Kenya businesses.">
+        content="Thika-based web development services for businesses. Custom websites, e-commerce, and digital solutions.">
     <meta property="og:image" content="https://wiredwise.vercel.app/images/og-wiredwise-thika.jpg">
-    <meta property="og:url" content="https://wiredwise.vercel.app/">
+    <meta property="og:url" content="https://wiredwise.vercel.app/web%20development/webdevelopment.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_KE">
 
     <!-- Twitter Card with Thika references -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@WiredWise_KE">
-    <meta name="twitter:title" content="IT Solutions Thika - WiredWise Kenya">
+    <meta name="twitter:title" content="Web Development Thika - WiredWise Kenya">
     <meta name="twitter:description"
-        content="Professional IT services in Thika: network infrastructure, security & web development">
+        content="Professional web development services in Thika: custom websites, e-commerce, and business solutions">
     <meta name="twitter:image" content="https://wiredwise.vercel.app/images/twitter-wiredwise-thika.jpg">
 
     <!-- Precise Local SEO Tags -->
-    <link rel="canonical" href="https://wiredwise.vercel.app/">
+    <link rel="canonical" href="https://wiredwise.vercel.app/web%20development/webdevelopment.html">
     <meta name="geo.region" content="KE-13"> <!-- Kiambu County code -->
     <meta name="geo.placename" content="Thika">
     <meta name="geo.position" content="-1.0333;37.0833">
@@ -43,13 +41,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link
+        <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
 
     <!-- Performance Optimization -->
-    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -71,70 +68,243 @@
             }
         }
     </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #1e40af 100%);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+        }
+        .service-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #3b82f6;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .service-card.selected {
+            border-color: #3b82f6;
+            background-color: #f0f9ff;
+        }
+        .problem-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .problem-card:hover {
+            border-color: #3b82f6;
+        }
+        .problem-card.selected {
+            border-color: #3b82f6;
+            background-color: #f0f9ff;
+        }
+        .benefit-card {
+            transition: all 0.3s ease;
+        }
+        .benefit-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .form-card {
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+         /* Ensure consistent font application */
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6,
+        .font-heading {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "WiredWise",
-  "image": "https://wiredwise.vercel.app/logo.jpg",
-  "url": "https://wiredwise.vercel.app/",
-  "telephone": "+254 XXX XXX XXX",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Your Street Address",
-    "addressLocality": "Thika",
-    "addressRegion": "Kiambu",
-    "postalCode": "01000",
-    "addressCountry": "KE"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -1.0333,
-    "longitude": 37.0833
-  },
-  "areaServed": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": -1.0333,
-      "longitude": 37.0833
-    },
-    "geoRadius": "20000"
-  }
-}
-</script>
-
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Web Development Services",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "WiredWise",
+        "image": "https://wiredwise.vercel.app/logo.jpg",
+        "url": "https://wiredwise.vercel.app/",
+        "telephone": "+254 717 340777",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Corner 2, Kiganjo",
+          "addressLocality": "Thika",
+          "addressRegion": "Kiambu",
+          "postalCode": "01000",
+          "addressCountry": "KE"
+        }
+      },
+      "areaServed": "Thika, Kenya",
+      "serviceType": "Web Development"
+    }
+    </script>
 </head>
 
-<body class="bg-gray-50">
-    <!-- Header -->
-    <header class="gradient-bg text-white">
-        <div class="container mx-auto px-4 py-8">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center">
-                    <a href="/index.html">
-                        <span class="font-heading text-2xl">WiredWise</span>
-                    </a>
-                </div>
-                <nav class="hidden md:flex space-x-6">
-                    <a href="#"
-                        class="bg-white text-blue-700 font-medium py-2 px-4 rounded-lg hover:bg-blue-50 transition">Contact</a>
-                </nav>
-                <button class="md:hidden text-white">
-                    <i class="fas fa-bars text-2xl"></i>
+<body class="font-body bg-white">
+    <!-- Header - Consistent with index page -->
+    <header class="w-full flex items-center justify-between p-4 border-b sticky top-0 bg-white z-50">
+        <h1 class="text-2xl font-heading font-bold">
+            <a href="/index.html">
+                <img src="/src/icons/wiredwiselogo.png" alt="wiredwise-thika-it-solutions Logo" class="h-12">
+            </a>
+        </h1>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex gap-8 font-semibold">
+            <!-- Services Dropdown -->
+            <div class="relative group">
+                <button class="inline-flex items-center gap-x-1 font-semibold text-gray-900 hover:text-blue-800 transition">
+                    <span>Services</span>
+                    <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="size-5">
+                        <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                    </svg>
                 </button>
+
+                <!-- Services Dropdown Menu -->
+                <div class="absolute hidden group-hover:block w-screen max-w-md -left-40 top-full mt-2 overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-200 z-50">
+                    <div class="p-4">
+                        <!-- Web Development Section -->
+                        <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-blue-50 transition">
+                            <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-blue-100 group-hover:bg-blue-200">
+                                <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <a href="/web development/webdevelopment.html" class="font-semibold text-gray-900">
+                                    Web Development
+                                    <span class="absolute inset-0"></span>
+                                </a>
+                                <p class="mt-1 text-gray-600 font-light">Professional websites and e-commerce solutions</p>
+                            </div>
+                        </div>
+
+                        <!-- IT Solutions Section -->
+                        <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-blue-50 transition">
+                            <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-blue-100 group-hover:bg-blue-200">
+                                <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <a href="/index.html#services" class="font-semibold text-gray-900">
+                                    WiFi & Networking
+                                    <span class="absolute inset-0"></span>
+                                </a>
+                                <p class="mt-1 text-gray-600 font-light">Reliable internet and network solutions</p>
+                            </div>
+                        </div>
+
+                        <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-blue-50 transition">
+                            <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-blue-100 group-hover:bg-blue-200">
+                                <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <a href="/index.html#services" class="font-semibold text-gray-900">
+                                    CCTV Systems
+                                    <span class="absolute inset-0"></span>
+                                </a>
+                                <p class="mt-1 text-gray-600 font-light">Advanced security surveillance solutions</p>
+                            </div>
+                        </div>
+
+                        <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-blue-50 transition">
+                            <div class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-blue-100 group-hover:bg-blue-200">
+                                <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <a href="/index.html#services" class="font-semibold text-gray-900">
+                                    Access Control
+                                    <span class="absolute inset-0"></span>
+                                </a>
+                                <p class="mt-1 text-gray-600 font-light">Smart entry and security management</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Call to Action Section -->
+                    <div class="grid grid-cols-2 divide-x divide-gray-200 bg-gray-50">
+                        <a href="#web-form" class="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 hover:bg-blue-50 transition">
+                            <svg class="h-5 w-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                            </svg>
+                            Get Quote
+                        </a>
+                        <a href="/index.html#contact" class="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 hover:bg-blue-50 transition">
+                            <svg class="h-5 w-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <div class="max-w-4xl mx-auto text-center py-16">
-                <h1 class="font-heading text-4xl md:text-5xl font-bold mb-6">Transform Your Business with Expert Web
-                    Solutions</h1>
-                <p class="text-xl mb-10 max-w-2xl mx-auto">Tell us about your challenges and we'll create a custom
-                    digital solution that drives growth and exceeds expectations</p>
-                <a href="#web-form" class="btn-primary text-white font-bold py-3 px-8 rounded-lg inline-block">Start
-                    Your Project Now</a>
+            <a href="/index.html#about" class="hover:text-blue-800 transition">About</a>
+            <a href="/index.html#portfolio" class="hover:text-blue-800 transition">Portfolio</a>
+            <a href="/index.html#contact" class="hover:text-blue-800 transition">Contact</a>
+            <a href="/index.html#faq" class="hover:text-blue-800 transition">FAQ</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuToggle" class="block md:hidden focus:outline-none">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <!-- Mobile Nav -->
+        <nav id="mobileMenu" class="hidden absolute top-20 left-0 w-full bg-white flex flex-col items-center gap-6 py-8 shadow-md z-40">
+            <!-- Mobile Services Dropdown -->
+            <div class="w-full px-6">
+                <button id="mobileServicesToggle" class="w-full flex justify-between items-center py-2 font-medium">
+                    <span>Services</span>
+                    <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div id="mobileServicesDropdown" class="hidden pl-4 mt-2 space-y-3 border-l-2 border-blue-200">
+                    <a href="/web development/webdevelopment.html" class="block py-2 text-gray-700 hover:text-blue-800">Web Development</a>
+                    <a href="/index.html#services" class="block py-2 text-gray-700 hover:text-blue-800">WiFi & Networking</a>
+                    <a href="/index.html#services" class="block py-2 text-gray-700 hover:text-blue-800">CCTV Systems</a>
+                    <a href="/index.html#services" class="block py-2 text-gray-700 hover:text-blue-800">Access Control</a>
+                    <a href="/index.html#services" class="block py-2 text-gray-700 hover:text-blue-800">Structured Cabling</a>
+                    <a href="/index.html#services" class="block py-2 text-gray-700 hover:text-blue-800">Telephony Systems</a>
+                </div>
+            </div>
+
+            <a href="/index.html#about" class="transition py-2">About</a>
+            <a href="/index.html#portfolio" class="transition py-2">Portfolio</a>
+            <a href="/index.html#contact" class="transition py-2">Contact</a>
+            <a href="/index.html#faq" class="transition py-2">FAQ</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white">
+        <div class="container mx-auto px-4 py-16">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="font-heading text-4xl md:text-5xl font-bold mb-6">Transform Your Business with Expert Web Solutions</h1>
+                <p class="text-xl mb-10 max-w-2xl mx-auto">Tell us about your challenges and we'll create a custom digital solution that drives growth and exceeds expectations</p>
+                <a href="#web-form" class="btn-primary text-white font-bold py-3 px-8 rounded-lg inline-block">Start Your Project Now</a>
             </div>
         </div>
-    </header>
+    </section>
 
     <!-- Stats Section -->
     <section class="py-12 bg-white">
@@ -164,81 +334,61 @@
     <section id="web-form" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4 max-w-5xl">
             <div class="text-center mb-12">
-                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get Your Custom Web Solution
-                </h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">We start by understanding your unique challenges to
-                    create the perfect solution for your business</p>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get Your Custom Web Solution</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">We start by understanding your unique challenges to create the perfect solution for your business</p>
             </div>
 
             <!-- Form Container -->
             <div class="bg-white rounded-xl form-card overflow-hidden">
-                <form id="webDevelopmentForm" class="p-6 md:p-8">
+                <!-- Formspree Form -->
+                <form id="webDevelopmentForm" action="https://formspree.io/f/mpwezqzz" method="POST" class="p-6 md:p-8">
                     <!-- Step 1: Project Goals -->
                     <div id="step1">
-                        <h3 class="font-heading text-2xl font-bold text-gray-900 mb-6">What are your business goals?
-                        </h3>
+                        <h3 class="font-heading text-2xl font-bold text-gray-900 mb-6">What are your business goals?</h3>
 
                         <div class="mb-8">
-                            <label class="block text-gray-700 font-medium mb-4">What type of solution do you
-                                need?</label>
+                            <label class="block text-gray-700 font-medium mb-4">What type of solution do you need?</label>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <label
-                                    class="service-card flex items-start p-5 border-2 rounded-xl cursor-pointer bg-white hover:border-blue-500 transition">
-                                    <input type="radio" name="projectType" value="business"
-                                        class="mt-1 h-5 w-5 text-blue-600 mr-4">
+                                <label class="service-card flex items-start p-5 border-2 rounded-xl cursor-pointer bg-white hover:border-blue-500 transition">
+                                    <input type="radio" name="projectType" value="business" class="mt-1 h-5 w-5 text-blue-600 mr-4">
                                     <div>
                                         <span class="font-medium text-lg">Business Website</span>
-                                        <p class="text-gray-500 mt-2">Professional site to establish your brand online
-                                            and generate leads</p>
+                                        <p class="text-gray-500 mt-2">Professional site to establish your brand online and generate leads</p>
                                     </div>
                                 </label>
-                                <label
-                                    class="service-card flex items-start p-5 border-2 rounded-xl cursor-pointer bg-white hover:border-blue-500 transition">
-                                    <input type="radio" name="projectType" value="ecommerce"
-                                        class="mt-1 h-5 w-5 text-blue-600 mr-4">
+                                <label class="service-card flex items-start p-5 border-2 rounded-xl cursor-pointer bg-white hover:border-blue-500 transition">
+                                    <input type="radio" name="projectType" value="ecommerce" class="mt-1 h-5 w-5 text-blue-600 mr-4">
                                     <div>
                                         <span class="font-medium text-lg">E-commerce Store</span>
-                                        <p class="text-gray-500 mt-2">Sell products online with integrated payment
-                                            processing and inventory</p>
+                                        <p class="text-gray-500 mt-2">Sell products online with integrated payment processing and inventory</p>
                                     </div>
                                 </label>
-                                <label
-                                    class="service-card flex items-start p-5 border-2 rounded-xl cursor-pointer bg-white hover:border-blue-500 transition">
-                                    <input type="radio" name="projectType" value="webapp"
-                                        class="mt-1 h-5 w-5 text-blue-600 mr-4">
+                                <label class="service-card flex items-start p-5 border-2 rounded-xl cursor-pointer bg-white hover:border-blue-500 transition">
+                                    <input type="radio" name="projectType" value="webapp" class="mt-1 h-5 w-5 text-blue-600 mr-4">
                                     <div>
                                         <span class="font-medium text-lg">Web Application</span>
-                                        <p class="text-gray-500 mt-2">Custom software solution to automate business
-                                            processes</p>
+                                        <p class="text-gray-500 mt-2">Custom software solution to automate business processes</p>
                                     </div>
                                 </label>
-                                <label
-                                    class="service-card flex items-start p-5 border-2 rounded-xl cursor-pointer bg-white hover:border-blue-500 transition">
-                                    <input type="radio" name="projectType" value="other"
-                                        class="mt-1 h-5 w-5 text-blue-600 mr-4">
+                                <label class="service-card flex items-start p-5 border-2 rounded-xl cursor-pointer bg-white hover:border-blue-500 transition">
+                                    <input type="radio" name="projectType" value="other" class="mt-1 h-5 w-5 text-blue-600 mr-4">
                                     <div>
                                         <span class="font-medium text-lg">Complete Digital Transformation</span>
-                                        <p class="text-gray-500 mt-2">End-to-end solution combining web, mobile, and
-                                            backend systems</p>
+                                        <p class="text-gray-500 mt-2">End-to-end solution combining web, mobile, and backend systems</p>
                                     </div>
                                 </label>
                             </div>
                         </div>
 
                         <div class="mb-8">
-                            <label for="primaryGoal" class="block text-gray-700 font-medium mb-3">What's the primary
-                                goal for this project?</label>
-                            <textarea id="primaryGoal" name="primaryGoal" rows="3"
-                                class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                                placeholder="Examples: Increase online sales by 30%, reduce customer service calls, attract 500 new leads/month"></textarea>
+                            <label for="primaryGoal" class="block text-gray-700 font-medium mb-3">What's the primary goal for this project?</label>
+                            <textarea id="primaryGoal" name="primaryGoal" rows="3" class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Examples: Increase online sales by 30%, reduce customer service calls, attract 500 new leads/month"></textarea>
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                             <div>
-                                <label for="timeline" class="block text-gray-700 font-medium mb-3">Desired
-                                    Timeline</label>
-                                <select id="timeline" name="timeline"
-                                    class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                <label for="timeline" class="block text-gray-700 font-medium mb-3">Desired Timeline</label>
+                                <select id="timeline" name="timeline" class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                                     <option value="">When do you need this solution?</option>
                                     <option value="asap">ASAP (within 1 month)</option>
                                     <option value="1-3">1-3 months</option>
@@ -247,10 +397,8 @@
                                 </select>
                             </div>
                             <div>
-                                <label for="budget" class="block text-gray-700 font-medium mb-3">Project Budget
-                                    (KES)</label>
-                                <select id="budget" name="budget"
-                                    class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                <label for="budget" class="block text-gray-700 font-medium mb-3">Project Budget (KES)</label>
+                                <select id="budget" name="budget" class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                                     <option value="">What's your estimated budget?</option>
                                     <option value="50k">Under 60,000</option>
                                     <option value="100-250">80,000 - 150,000</option>
@@ -261,8 +409,7 @@
                         </div>
 
                         <div class="flex justify-center sm:justify-end">
-                            <button type="button" onclick="showStep('step2')"
-                                class="btn-primary text-white py-3 px-8 rounded-lg font-bold w-full sm:w-auto text-center">
+                            <button type="button" onclick="showStep('step2')" class="btn-primary text-white py-3 px-8 rounded-lg font-bold w-full sm:w-auto text-center">
                                 Next <i class="fas fa-arrow-right ml-2"></i>
                             </button>
                         </div>
@@ -270,89 +417,69 @@
 
                     <!-- Step 2: Current Website Status -->
                     <div id="step2" class="hidden">
-                        <h3 class="font-heading text-2xl font-bold text-gray-900 mb-6">Tell us about your current online
-                            presence</h3>
+                        <h3 class="font-heading text-2xl font-bold text-gray-900 mb-6">Tell us about your current online presence</h3>
 
                         <div class="mb-8">
                             <label class="block text-gray-700 font-medium mb-4">Do you currently have a website?</label>
                             <div class="flex flex-col space-y-4 mb-6 md:flex-row md:space-x-6 md:space-y-0">
                                 <label class="flex items-center">
-                                    <input type="radio" name="hasWebsite" value="yes" class="h-5 w-5 text-blue-600 mr-3"
-                                        onchange="toggleWebsiteFields(true)">
+                                    <input type="radio" name="hasWebsite" value="yes" class="h-5 w-5 text-blue-600 mr-3" onchange="toggleWebsiteFields(true)">
                                     <span class="text-lg">Yes, I have an existing website</span>
                                 </label>
                                 <label class="flex items-center">
-                                    <input type="radio" name="hasWebsite" value="no" class="h-5 w-5 text-blue-600 mr-3"
-                                        onchange="toggleWebsiteFields(false)">
+                                    <input type="radio" name="hasWebsite" value="no" class="h-5 w-5 text-blue-600 mr-3" onchange="toggleWebsiteFields(false)">
                                     <span class="text-lg">No, I need a new website</span>
                                 </label>
                             </div>
 
                             <div id="websiteUrlContainer" class="hidden mb-8">
-                                <label for="websiteUrl" class="block text-gray-700 font-medium mb-3">Your Website
-                                    URL</label>
-                                <input type="url" id="websiteUrl" name="websiteUrl"
-                                    class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                                    placeholder="https://yourbusiness.com">
+                                <label for="websiteUrl" class="block text-gray-700 font-medium mb-3">Your Website URL</label>
+                                <input type="url" id="websiteUrl" name="websiteUrl" class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="https://yourbusiness.com">
                             </div>
                         </div>
 
                         <!-- Problems Section (Only shown if user has a website) -->
                         <div id="problemsSection" class="hidden">
                             <div class="mb-8">
-                                <label class="block text-gray-700 font-medium mb-4">What challenges are you facing with
-                                    your current website?</label>
+                                <label class="block text-gray-700 font-medium mb-4">What challenges are you facing with your current website?</label>
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <label
-                                        class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
-                                        <input type="checkbox" name="problems" value="design"
-                                            class="mt-1 h-5 w-5 text-blue-600 mr-4">
+                                    <label class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
+                                        <input type="checkbox" name="problems" value="design" class="mt-1 h-5 w-5 text-blue-600 mr-4">
                                         <div>
                                             <span class="font-medium">Outdated Design</span>
-                                            <p class="text-gray-500 mt-2">Looks old and doesn't represent my current
-                                                brand</p>
+                                            <p class="text-gray-500 mt-2">Looks old and doesn't represent my current brand</p>
                                         </div>
                                     </label>
-                                    <label
-                                        class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
-                                        <input type="checkbox" name="problems" value="mobile"
-                                            class="mt-1 h-5 w-5 text-blue-600 mr-4">
+                                    <label class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
+                                        <input type="checkbox" name="problems" value="mobile" class="mt-1 h-5 w-5 text-blue-600 mr-4">
                                         <div>
                                             <span class="font-medium">Not Mobile-Friendly</span>
                                             <p class="text-gray-500 mt-2">Doesn't work well on phones or tablets</p>
                                         </div>
                                     </label>
-                                    <label
-                                        class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
-                                        <input type="checkbox" name="problems" value="speed"
-                                            class="mt-1 h-5 w-5 text-blue-600 mr-4">
+                                    <label class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
+                                        <input type="checkbox" name="problems" value="speed" class="mt-1 h-5 w-5 text-blue-600 mr-4">
                                         <div>
                                             <span class="font-medium">Slow Loading Speed</span>
                                             <p class="text-gray-500 mt-2">Pages take too long to load</p>
                                         </div>
                                     </label>
-                                    <label
-                                        class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
-                                        <input type="checkbox" name="problems" value="conversion"
-                                            class="mt-1 h-5 w-5 text-blue-600 mr-4">
+                                    <label class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
+                                        <input type="checkbox" name="problems" value="conversion" class="mt-1 h-5 w-5 text-blue-600 mr-4">
                                         <div>
                                             <span class="font-medium">Low Conversion Rates</span>
                                             <p class="text-gray-500 mt-2">Visitors aren't becoming customers</p>
                                         </div>
                                     </label>
-                                    <label
-                                        class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
-                                        <input type="checkbox" name="problems" value="seo"
-                                            class="mt-1 h-5 w-5 text-blue-600 mr-4">
+                                    <label class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
+                                        <input type="checkbox" name="problems" value="seo" class="mt-1 h-5 w-5 text-blue-600 mr-4">
                                         <div>
                                             <span class="font-medium">Poor Search Rankings</span>
                                             <p class="text-gray-500 mt-2">My site doesn't appear in search results</p>
                                         </div>
                                     </label>
-                                    <label
-                                        class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
-                                        <input type="checkbox" name="problems" value="security"
-                                            class="mt-1 h-5 w-5 text-blue-600 mr-4">
+                                    <label class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
+                                        <input type="checkbox" name="problems" value="security" class="mt-1 h-5 w-5 text-blue-600 mr-4">
                                         <div>
                                             <span class="font-medium">Security Concerns</span>
                                             <p class="text-gray-500 mt-2">Worried about hacking or data breaches</p>
@@ -362,11 +489,8 @@
                             </div>
 
                             <div class="mb-8">
-                                <label for="specificProblems" class="block text-gray-700 font-medium mb-3">Describe your
-                                    biggest challenge in more detail</label>
-                                <textarea id="specificProblems" name="specificProblems" rows="3"
-                                    class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                                    placeholder="What specific issues are causing the most frustration? What would you like to improve?"></textarea>
+                                <label for="specificProblems" class="block text-gray-700 font-medium mb-3">Describe your biggest challenge in more detail</label>
+                                <textarea id="specificProblems" name="specificProblems" rows="3" class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="What specific issues are causing the most frustration? What would you like to improve?"></textarea>
                             </div>
                         </div>
 
@@ -378,77 +502,62 @@
                                         <i class="fas fa-lightbulb text-blue-600 text-2xl"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-heading text-xl font-bold mb-3">You're Making a Smart Business
-                                            Decision</h4>
-                                        <p class="text-gray-700">A professional website is essential for modern business
-                                            success. Companies with effective websites experience:</p>
+                                        <h4 class="font-heading text-xl font-bold mb-3">You're Making a Smart Business Decision</h4>
+                                        <p class="text-gray-700">A professional website is essential for modern business success. Companies with effective websites experience:</p>
                                     </div>
                                 </div>
 
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                                     <div class="benefit-card bg-white p-4 rounded-lg">
                                         <div class="flex items-center mb-2">
-                                            <div
-                                                class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                            <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
                                                 <i class="fas fa-chart-line text-blue-600"></i>
                                             </div>
                                             <span class="font-bold">45% Higher Revenue Growth</span>
                                         </div>
-                                        <p class="text-gray-600">Businesses with websites grow significantly faster than
-                                            those without.</p>
+                                        <p class="text-gray-600">Businesses with websites grow significantly faster than those without.</p>
                                     </div>
                                     <div class="benefit-card bg-white p-4 rounded-lg">
                                         <div class="flex items-center mb-2">
-                                            <div
-                                                class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                            <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
                                                 <i class="fas fa-users text-blue-600"></i>
                                             </div>
                                             <span class="font-bold">6x More Credibility</span>
                                         </div>
-                                        <p class="text-gray-600">Customers trust businesses with professional websites
-                                            much more.</p>
+                                        <p class="text-gray-600">Customers trust businesses with professional websites much more.</p>
                                     </div>
                                     <div class="benefit-card bg-white p-4 rounded-lg">
                                         <div class="flex items-center mb-2">
-                                            <div
-                                                class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                            <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
                                                 <i class="fas fa-shopping-cart text-blue-600"></i>
                                             </div>
                                             <span class="font-bold">24/7 Sales Channel</span>
                                         </div>
-                                        <p class="text-gray-600">Your website works for you even when you're sleeping.
-                                        </p>
+                                        <p class="text-gray-600">Your website works for you even when you're sleeping.</p>
                                     </div>
                                     <div class="benefit-card bg-white p-4 rounded-lg">
                                         <div class="flex items-center mb-2">
-                                            <div
-                                                class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                            <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
                                                 <i class="fas fa-search text-blue-600"></i>
                                             </div>
                                             <span class="font-bold">5x More Visibility</span>
                                         </div>
-                                        <p class="text-gray-600">Get discovered by new customers searching for your
-                                            services.</p>
+                                        <p class="text-gray-600">Get discovered by new customers searching for your services.</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="mb-8">
-                                <label for="businessVision" class="block text-gray-700 font-medium mb-3">What would a
-                                    successful website accomplish for your business?</label>
-                                <textarea id="businessVision" name="businessVision" rows="3"
-                                    class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                                    placeholder="Examples: Help customers find my location, showcase my products, allow online bookings"></textarea>
+                                <label for="businessVision" class="block text-gray-700 font-medium mb-3">What would a successful website accomplish for your business?</label>
+                                <textarea id="businessVision" name="businessVision" rows="3" class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Examples: Help customers find my location, showcase my products, allow online bookings"></textarea>
                             </div>
                         </div>
 
                         <div class="flex flex-col gap-4 sm:flex-row sm:justify-between">
-                            <button type="button" onclick="showStep('step1')"
-                                class="bg-gray-200 text-gray-700 py-3 px-6 rounded-lg font-bold hover:bg-gray-300 transition">
+                            <button type="button" onclick="showStep('step1')" class="bg-gray-200 text-gray-700 py-3 px-6 rounded-lg font-bold hover:bg-gray-300 transition">
                                 Back
                             </button>
-                            <button type="button" onclick="showStep('step3')"
-                                class="btn-primary text-white py-3 px-8 rounded-lg font-bold">
+                            <button type="button" onclick="showStep('step3')" class="btn-primary text-white py-3 px-8 rounded-lg font-bold">
                                 Next <i class="fas fa-arrow-right ml-2"></i>
                             </button>
                         </div>
@@ -456,79 +565,62 @@
 
                     <!-- Step 3: Desired Features -->
                     <div id="step3" class="hidden">
-                        <h3 class="font-heading text-2xl font-bold text-gray-900 mb-6">What features would make your
-                            website successful?</h3>
+                        <h3 class="font-heading text-2xl font-bold text-gray-900 mb-6">What features would make your website successful?</h3>
 
                         <div class="mb-8">
                             <label class="block text-gray-700 font-medium mb-4">Select the features you need:</label>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <label
-                                    class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
-                                    <input type="checkbox" name="features" value="responsive"
-                                        class="mt-1 h-5 w-5 text-blue-600 mr-4">
+                                <label class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
+                                    <input type="checkbox" name="features" value="responsive" class="mt-1 h-5 w-5 text-blue-600 mr-4">
                                     <div>
                                         <span class="font-medium">Mobile-Responsive Design</span>
                                         <p class="text-gray-500 mt-2">Works perfectly on all devices</p>
                                     </div>
                                 </label>
-                                <label
-                                    class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
-                                    <input type="checkbox" name="features" value="cms"
-                                        class="mt-1 h-5 w-5 text-blue-600 mr-4">
+                                <label class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
+                                    <input type="checkbox" name="features" value="cms" class="mt-1 h-5 w-5 text-blue-600 mr-4">
                                     <div>
                                         <span class="font-medium">Content Management System</span>
                                         <p class="text-gray-500 mt-2">Update content yourself easily</p>
                                     </div>
                                 </label>
-                                <label
-                                    class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
-                                    <input type="checkbox" name="features" value="ecommerce"
-                                        class="mt-1 h-5 w-5 text-blue-600 mr-4">
+                                <label class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
+                                    <input type="checkbox" name="features" value="ecommerce" class="mt-1 h-5 w-5 text-blue-600 mr-4">
                                     <div>
                                         <span class="font-medium">E-commerce Functionality</span>
                                         <p class="text-gray-500 mt-2">Sell products, process payments</p>
                                     </div>
                                 </label>
-                                <label
-                                    class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
-                                    <input type="checkbox" name="features" value="seo"
-                                        class="mt-1 h-5 w-5 text-blue-600 mr-4">
+                                <label class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
+                                    <input type="checkbox" name="features" value="seo" class="mt-1 h-5 w-5 text-blue-600 mr-4">
                                     <div>
                                         <span class="font-medium">SEO Optimization</span>
                                         <p class="text-gray-500 mt-2">Rank higher in search results</p>
                                     </div>
                                 </label>
-                                <label
-                                    class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
-                                    <input type="checkbox" name="features" value="blog"
-                                        class="mt-1 h-5 w-5 text-blue-600 mr-4">
+                                <label class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
+                                    <input type="checkbox" name="features" value="blog" class="mt-1 h-5 w-5 text-blue-600 mr-4">
                                     <div>
                                         <span class="font-medium">Blog/News Section</span>
                                         <p class="text-gray-500 mt-2">Share updates and content</p>
                                     </div>
                                 </label>
-                                <label
-                                    class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
-                                    <input type="checkbox" name="features" value="multilingual"
-                                        class="mt-1 h-5 w-5 text-blue-600 mr-4">
+                                <label class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
+                                    <input type="checkbox" name="features" value="multilingual" class="mt-1 h-5 w-5 text-blue-600 mr-4">
                                     <div>
                                         <span class="font-medium">Multilingual Support</span>
                                         <p class="text-gray-500 mt-2">Reach diverse audiences</p>
                                     </div>
                                 </label>
-                                <label
-                                    class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
-                                    <input type="checkbox" name="features" value="login"
-                                        class="mt-1 h-5 w-5 text-blue-600 mr-4">
+                                <label class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
+                                    <input type="checkbox" name="features" value="login" class="mt-1 h-5 w-5 text-blue-600 mr-4">
                                     <div>
                                         <span class="font-medium">User Login/Accounts</span>
                                         <p class="text-gray-500 mt-2">Membership or customer accounts</p>
                                     </div>
                                 </label>
-                                <label
-                                    class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
-                                    <input type="checkbox" name="features" value="api"
-                                        class="mt-1 h-5 w-5 text-blue-600 mr-4">
+                                <label class="problem-card flex items-start p-4 border rounded-lg bg-white cursor-pointer">
+                                    <input type="checkbox" name="features" value="api" class="mt-1 h-5 w-5 text-blue-600 mr-4">
                                     <div>
                                         <span class="font-medium">API Integration</span>
                                         <p class="text-gray-500 mt-2">Connect with other services</p>
@@ -538,20 +630,15 @@
                         </div>
 
                         <div class="mb-8">
-                            <label for="additionalFeatures" class="block text-gray-700 font-medium mb-3">Any other
-                                requirements or special features?</label>
-                            <textarea id="additionalFeatures" name="additionalFeatures" rows="3"
-                                class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                                placeholder="Examples: Integration with existing systems, custom functionality, specific design elements"></textarea>
+                            <label for="additionalFeatures" class="block text-gray-700 font-medium mb-3">Any other requirements or special features?</label>
+                            <textarea id="additionalFeatures" name="additionalFeatures" rows="3" class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Examples: Integration with existing systems, custom functionality, specific design elements"></textarea>
                         </div>
 
                         <div class="flex flex-col-reverse gap-4 sm:flex-row sm:justify-between">
-                            <button type="button" onclick="showStep('step2')"
-                                class="flex items-center justify-center w-full py-3 px-6 bg-gray-200 text-gray-700 rounded-lg font-bold hover:bg-gray-300 transition sm:w-auto sm:justify-start">
+                            <button type="button" onclick="showStep('step2')" class="flex items-center justify-center w-full py-3 px-6 bg-gray-200 text-gray-700 rounded-lg font-bold hover:bg-gray-300 transition sm:w-auto sm:justify-start">
                                 Back
                             </button>
-                            <button type="button" onclick="showStep('step4')"
-                                class="flex items-center justify-center w-full py-3 px-8 btn-primary text-white rounded-lg font-bold sm:w-auto sm:justify-start">
+                            <button type="button" onclick="showStep('step4')" class="flex items-center justify-center w-full py-3 px-8 btn-primary text-white rounded-lg font-bold sm:w-auto sm:justify-start">
                                 Contact Information <i class="fas fa-arrow-right ml-2"></i>
                             </button>
                         </div>
@@ -564,40 +651,28 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div>
                                 <label for="fullName" class="block text-gray-700 font-medium mb-2">Full Name *</label>
-                                <input type="text" id="fullName" name="fullName" required
-                                    class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                                    placeholder="Your name">
+                                <input type="text" id="fullName" name="fullName" required class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Your name">
                             </div>
                             <div>
-                                <label for="company"
-                                    class="block text-gray-700 font-medium mb-2">Company/Organization</label>
-                                <input type="text" id="company" name="company"
-                                    class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                                    placeholder="Company name">
+                                <label for="company" class="block text-gray-700 font-medium mb-2">Company/Organization</label>
+                                <input type="text" id="company" name="company" class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Company name">
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div>
                                 <label for="email" class="block text-gray-700 font-medium mb-2">Email Address *</label>
-                                <input type="email" id="email" name="email" required
-                                    class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                                    placeholder="your@email.com">
+                                <input type="email" id="email" name="email" required class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="your@email.com">
                             </div>
                             <div>
                                 <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number *</label>
-                                <input type="tel" id="phone" name="phone" required
-                                    class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                                    placeholder="+254 700 000000">
+                                <input type="tel" id="phone" name="phone" required class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="+254 700 000000">
                             </div>
                         </div>
 
                         <div class="mb-8">
-                            <label for="message" class="block text-gray-700 font-medium mb-2">Anything else we should
-                                know?</label>
-                            <textarea id="message" name="message" rows="3"
-                                class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                                placeholder="Specific requirements, timeline constraints, or other details"></textarea>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Anything else we should know?</label>
+                            <textarea id="message" name="message" rows="3" class="w-full p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Specific requirements, timeline constraints, or other details"></textarea>
                         </div>
 
                         <!-- Honeypot Field -->
@@ -606,17 +681,11 @@
                             <input type="text" id="website" name="website">
                         </div>
 
-                        <!-- reCAPTCHA -->
-                        <div class="g-recaptcha mb-6" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-                            data-callback="enableSubmit"></div>
-
                         <div class="flex flex-col gap-4 sm:flex-row sm:justify-between">
-                            <button type="button" onclick="showStep('step3')"
-                                class="flex items-center justify-center w-full py-3 px-6 bg-gray-200 text-gray-700 rounded-lg font-bold hover:bg-gray-300 transition sm:w-auto sm:justify-start">
+                            <button type="button" onclick="showStep('step3')" class="flex items-center justify-center w-full py-3 px-6 bg-gray-200 text-gray-700 rounded-lg font-bold hover:bg-gray-300 transition sm:w-auto sm:justify-start">
                                 Back
                             </button>
-                            <button type="submit" id="submitBtn"
-                                class="w-full text-center py-3 px-8 btn-primary text-white rounded-lg font-bold sm:w-auto">
+                            <button type="submit" id="submitBtn" class="w-full text-center py-3 px-8 btn-primary text-white rounded-lg font-bold sm:w-auto">
                                 Get Your Proposal
                             </button>
                         </div>
@@ -627,48 +696,39 @@
                         <div class="text-green-500 text-6xl mb-6">
                             <i class="fas fa-check-circle"></i>
                         </div>
-                        <h3 class="font-heading text-2xl font-bold text-gray-900 mb-4">Thank You for Your Submission!
-                        </h3>
+                        <h3 class="font-heading text-2xl font-bold text-gray-900 mb-4">Thank You for Your Submission!</h3>
                         <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
-                            We've received your information and are already working on your custom solution. Our team
-                            will contact you within
-                            24 hours to discuss your project and provide a personalized proposal.
+                            We've received your information and are already working on your custom solution. Our team will contact you within 24 hours to discuss your project and provide a personalized proposal.
                         </p>
 
                         <div class="bg-blue-50 rounded-xl p-6 max-w-lg mx-auto">
                             <h4 class="font-heading font-bold text-lg mb-4">What Happens Next:</h4>
                             <ul class="text-left space-y-4">
                                 <li class="flex items-start">
-                                    <div
-                                        class="bg-blue-100 text-blue-700 w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <div class="bg-blue-100 text-blue-700 w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                                         1
                                     </div>
                                     <div>
                                         <span class="font-medium">Personalized Consultation</span>
-                                        <p class="text-gray-600">We'll schedule a call to understand your business in
-                                            depth</p>
+                                        <p class="text-gray-600">We'll schedule a call to understand your business in depth</p>
                                     </div>
                                 </li>
                                 <li class="flex items-start">
-                                    <div
-                                        class="bg-blue-100 text-blue-700 w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <div class="bg-blue-100 text-blue-700 w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                                         2
                                     </div>
                                     <div>
                                         <span class="font-medium">Custom Proposal</span>
-                                        <p class="text-gray-600">You'll receive a tailored solution with timeline and
-                                            investment</p>
+                                        <p class="text-gray-600">You'll receive a tailored solution with timeline and investment</p>
                                     </div>
                                 </li>
                                 <li class="flex items-start">
-                                    <div
-                                        class="bg-blue-100 text-blue-700 w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                    <div class="bg-blue-100 text-blue-700 w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                                         3
                                     </div>
                                     <div>
                                         <span class="font-medium">Project Kickoff</span>
-                                        <p class="text-gray-600">We'll start building your solution immediately after
-                                            approval</p>
+                                        <p class="text-gray-600">We'll start building your solution immediately after approval</p>
                                     </div>
                                 </li>
                             </ul>
@@ -676,7 +736,7 @@
 
                         <div class="mt-8">
                             <p class="font-medium mb-4">In the meantime, explore our portfolio:</p>
-                            <a href="#" class="btn-primary text-white py-3 px-8 rounded-lg font-bold inline-block">
+                            <a href="/index.html#portfolio" class="btn-primary text-white py-3 px-8 rounded-lg font-bold inline-block">
                                 Our Work <i class="fas fa-arrow-right ml-2"></i>
                             </a>
                         </div>
@@ -690,10 +750,8 @@
     <section class="py-16 gradient-bg text-white">
         <div class="container mx-auto px-4 text-center">
             <h2 class="font-heading text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-            <p class="text-xl mb-10 max-w-2xl mx-auto">Let's discuss how our web solutions can help you achieve your
-                business goals</p>
-            <a href="#web-form"
-                class="bg-white text-blue-700 font-bold py-3 px-8 rounded-lg inline-block hover:bg-blue-50 transition">
+            <p class="text-xl mb-10 max-w-2xl mx-auto">Let's discuss how our web solutions can help you achieve your business goals</p>
+            <a href="#web-form" class="bg-white text-blue-700 font-bold py-3 px-8 rounded-lg inline-block hover:bg-blue-50 transition">
                 Start Your Project Now
             </a>
         </div>
@@ -720,10 +778,10 @@
                     <h4 class="font-heading font-bold text-lg mb-4">Services</h4>
                     <ul class="space-y-2">
                         <li><a href="webdevelopment.html" class="text-blue-300 hover:text-white">Web Development</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">E-commerce Solutions</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Mobile App Development</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">UI/UX Design</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Digital Marketing</a></li>
+                        <li><a href="/index.html#services" class="text-gray-400 hover:text-white">E-commerce Solutions</a></li>
+                        <li><a href="/index.html#services" class="text-gray-400 hover:text-white">Mobile App Development</a></li>
+                        <li><a href="/index.html#services" class="text-gray-400 hover:text-white">UI/UX Design</a></li>
+                        <li><a href="/index.html#services" class="text-gray-400 hover:text-white">Digital Marketing</a></li>
                     </ul>
                 </div>
 
@@ -740,7 +798,7 @@
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mt-1 text-blue-400"></i>
-                            <span class="text-gray-400 m-1">info@wiredwise.tech</span>
+                            <span class="text-gray-400 m-1">dev.wiredwise@outlook.com</span>
                         </li>
                     </ul>
                 </div>
@@ -763,8 +821,32 @@
             </div>
         </div>
     </footer>
-    <script src="/js/script.js"></script>
+
     <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mobile services dropdown toggle
+        const mobileServicesToggle = document.getElementById('mobileServicesToggle');
+        const mobileServicesDropdown = document.getElementById('mobileServicesDropdown');
+
+        if (mobileServicesToggle && mobileServicesDropdown) {
+            mobileServicesToggle.addEventListener('click', () => {
+                mobileServicesDropdown.classList.toggle('hidden');
+                // Rotate the arrow icon
+                const icon = mobileServicesToggle.querySelector('svg');
+                icon.classList.toggle('rotate-180');
+            });
+        }
+
         // Form step navigation
         function showStep(stepId) {
             // Hide all steps
@@ -796,11 +878,10 @@
 
         // Form submission
         document.getElementById('webDevelopmentForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-
             // Honeypot check
             const honeypot = document.getElementById('website').value;
             if (honeypot !== '') {
+                e.preventDefault();
                 return; // Likely a bot, don't submit
             }
 
@@ -812,11 +893,6 @@
             document.getElementById('thankYouMessage').scrollIntoView({ behavior: 'smooth' });
         });
 
-        // Enable submit button after reCAPTCHA
-        function enableSubmit() {
-            document.getElementById('submitBtn').disabled = false;
-        }
-
         // Problem card selection
         document.querySelectorAll('.problem-card').forEach(card => {
             card.addEventListener('click', function (e) {
@@ -827,7 +903,24 @@
                 }
             });
         });
+        
+        // Service card selection
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', function (e) {
+                if (e.target.tagName !== 'INPUT') {
+                    const radio = this.querySelector('input[type="radio"]');
+                    radio.checked = true;
+                    
+                    // Remove selected class from all service cards
+                    document.querySelectorAll('.service-card').forEach(c => {
+                        c.classList.remove('selected');
+                    });
+                    
+                    // Add selected class to clicked card
+                    this.classList.add('selected');
+                }
+            });
+        });
     </script>
 </body>
-
 </html>
